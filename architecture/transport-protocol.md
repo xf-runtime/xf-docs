@@ -51,10 +51,10 @@ The server’s response:
 If an attribute contains SQL in `xt`, the runtime executes it and returns:
 
 - A single table  
-- Or multiple tables if `{{dataset}}` is present  
-xy.bookings.t[0]
-xy.bookings.t[1]
-
+- Or multiple tables if `{{dataset}}` is present
+  For example
+    xy.bookings.t[0]
+    xy.bookings.t[1]
 
 ## Statelessness
 
@@ -63,13 +63,6 @@ The server stores nothing between requests.
 
 This enables:
 - Infinite horizontal scaling  
-- Zero session management  
+- Zero session management
 - Zero orchestration middleware  
-
-
-
-
-
-
-Example:
 
