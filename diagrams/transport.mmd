@@ -1,0 +1,26 @@
+flowchart TD
+    %% Transport protocol: Intent, State, Data, Unified dispatch, y-segment, xt dataset/table
+
+    A[Client] --> B[Intent]
+    A --> C[State]
+    A --> D[Data]
+
+    B --> E[Runtime Dispatcher]
+    C --> E
+    D --> E
+
+    E --> F[Execution Protocol]
+    F --> G[Transport Isomorphism]
+
+    G --> H[y-segment]
+    G --> I[xt Dataset/Table]
+
+    H --> A
+    I --> A
+
+    style A fill:#222,color:#fff
+    style E fill:#444,color:#fff
+    style F fill:#555,color:#fff
+    style G fill:#666,color:#fff
+    style H fill:#333,color:#fff
+    style I fill:#333,color:#fff
