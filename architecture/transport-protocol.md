@@ -52,6 +52,24 @@ If an attribute contains SQL in `xt`, the runtime executes it and returns:
 
 - A single table  
 - Or multiple tables if `{{dataset}}` is present  
+xy.bookings.t[0]
+xy.bookings.t[1]
+
+
+## Statelessness
+
+All workflow state is carried inside the payload.  
+The server stores nothing between requests.
+
+This enables:
+- Infinite horizontal scaling  
+- Zero session management  
+- Zero orchestration middleware  
+
+
+
+
+
 
 Example:
 
