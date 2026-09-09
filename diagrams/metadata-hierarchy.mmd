@@ -1,0 +1,23 @@
+flowchart TD
+
+    A[XF System] --> B[T_ZXF_APP]
+    B --> C[T_ZXF_ENTITY]
+    C --> D[T_ZXF_ATTRIBUTE]
+
+    C --> E[T_ZXF_ROUTER]
+    C --> F[T_ZXF_CONTROLTYPE]
+    C --> G[T_ZXF_SELECTIONFILTER]
+    C --> H[T_ZXF_SETTINGS]
+
+    A --> I[T_ZXF_USER]
+    I --> J[T_ZXF_USERROLE]
+    I --> K[T_ZXF_USERRIGHT]
+    I --> L[T_ZXF_USERGROUP]
+    I --> M[T_ZXF_USER_USERGROUP]
+
+    A --> N[T_ZXF_DOMAIN]
+
+    style A fill:#222,color:#fff
+    style B fill:#444,color:#fff
+    style C fill:#555,color:#fff
+    style D fill:#666,color:#fff
