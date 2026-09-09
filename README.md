@@ -16,8 +16,8 @@ Guides for deterministic metadata generation using LLMs.
 ### Tutorials
 Step-by-step guides for building applications using xF.
 
-### Business & Partner Material
-Public-facing documents describing the commercial model and strategic positioning.
+### Business Material
+Public-facing documents describing the commercial model.
 
 ## GitHub Pages
 
