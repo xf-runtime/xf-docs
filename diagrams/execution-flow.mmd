@@ -1,0 +1,31 @@
+flowchart LR
+
+    subgraph GET Pipeline
+        G1[Load Entity Metadata]
+        G2[Load Attribute Metadata]
+        G3[Execute stridsql]
+        G4[Execute xt SQL]
+        G5[Apply FK Display Columns]
+        G6[Apply UI Sections]
+        G7[Build y-segment]
+        G8[Return Payload]
+    end
+
+    subgraph SET Pipeline
+        S1[Parse Incoming Values]
+        S2[Apply setsequence]
+        S3[Validate Mandatory Fields]
+        S4[Validate Uniqueness]
+        S5[Validate FK Constraints]
+        S6[Execute validationsql]
+        S7[Execute computesql]
+        S8[Execute deny_set]
+        S9[Morph Aggregates]
+        S10[Persist to DB or Stored Proc]
+        S11[Return Updated State]
+    end
+
+    G8 --> S1
+
+    style GET Pipeline fill:#333,color:#fff
+    style SET Pipeline fill:#444,color:#fff
