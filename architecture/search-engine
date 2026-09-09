@@ -1,0 +1,38 @@
+# xF Search Engine
+
+The built-in search engine provides deterministic, metadata-driven search across entities.
+If needed, it can be replaced with other systems such as Lucene or Elastic
+
+## Search Modes
+
+### 1. Built-in Search
+Uses metadata:
+- `issearchindex`
+- `isindexed`
+- `qry_viewcolumns`
+- `qry_orderbycolumns`
+
+### 2. Custom SQL Search
+Defined in:
+`customquery`
+which may point to:
+- Database
+- Full-text index
+- External search service
+- In-memory registry
+
+## FK Search
+
+Attributes may define:
+
+`fkquerymode`
+`fkdisplaycols`
+
+
+This controls how foreign entities are searched and displayed.
+
+## Deterministic Guarantees
+
+- No dynamic query generation  
+- All search behaviour is metadata-defined  
+- No code injection risk  
